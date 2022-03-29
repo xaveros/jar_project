@@ -1,0 +1,53 @@
+machen:
+- wenn benötigt sin response fit mit neuer phaseshift berechnung nochmal durchlaufen lassen, dann phaseshift all
+- abbildung erstellen mit custom cutoff frequencies über ganzen bereich (0.001Hz-1Hz) um hoffentlich zu zeigen dass dabei lineare
+Gerade entsteht, vergleichen mit uniformen Bereich bei Daten bei dem es sich auch eher linear verhält um zu zeigen auf was wir hinaus wollen
+- filter: zieht mean von einer amfreq periode ab wodurch alles was nicht damit in Verbindung steht herausfiltert,
+auch JAR. problematisch wird dies eher wenn JAR-Anstieg schneller abläuft als eine amfreq periode
+- wenn fit nicht funktioniert einfach weglassen, wenn sättigung vorhanden nochmal anschauen
+- base_eod und q10 und temp für eigenmannia
+
++ figures:
+    apteronotus: fundament by tims bachelor thesis, important that apteronotus only shifts his frequency up (as eigenmannia doesnt --> natalies measurements)
+    + spectogram
+    + jar trace out of specgram
+    + filtering of jar trace: mean noise cut --> subtracting jar response over whole stimulus
+    + fit and jar trace --> gain and phaseshift
+    + this for different am-frequencies and delta f (-15/-5Hz) --> compare gain for them
+    + gain curve for one or more single fish
+    + fit of gain curve for cutoff frequency and tau
+    + gain curve for all fish taken together
+    + single gain curves inside gain curve for all fish --> different cutoff frequencies --> comparison to metzen/chacron
+    --> fig_apt_specgram,
+        fig_apt_jar_filter_fit,
+        fig_apt_rms_gaincurve,
+        fig_apt_gaincurve_cutoff_tau,
+        sin_all_normal (without single gaincurves),
+        sin_all_uniform (with gaincurves for 5Hz)
+    !!! discard 2019lepto03 -5Hz --> RMS always over threshold
+    !!! discard 2020lepto04 gain fit doesnt work
+    !!! discard 2020lepto19 gain fit doesnt work
+
+    eigenmannia:
+    + deltaf / response: -2Hz different, show it
+    + spectogram
+    + direct to fit and jar trace 
+    + gain curve for one or more single fish
+    + gain curve for all fish taken together    !!! gains without filtering by RMS
+    - (step response eigen)
+    --> fig_eig_specgram
+        fig_eig_jar_filter_fit,
+        fig_eig_rms_gaincurve,
+        fig_eig_gaincurve_cutoff_tau,
+        sin_eig_normal (without single gaincurves),
+        sin_eig_uniform (with gaincurves for 5Hz)
+    !!! discard 2015eigen8 --> RMS always over threshold
+    ??? mean_noise_cut_eigen?
+    fish properties:
+    + parameters
+    + cutoff frequency - dominance score
+
+    offen: phaseshift, not working fit for some fish
+(
+- 2019lepto27/30: 27 - 0.05Hz (7-27-af, erste dat mit len(dat)=1), 30 - 0.001Hz (7-30-ah mit 0.005 anstatt gewollten 0.001Hz --> fehlt)
+)
